@@ -10,7 +10,7 @@ Stampiamo delle card contenenti i dettagli dei **prodotti**, come `immagine`, `t
 //CLASSE PADRE
 
 //ClASSE PRODOTTO
-class prodotto
+class Prodotto
 {
     private $immagine;
     private $titolo;
@@ -82,18 +82,15 @@ class prodotto
 //CLASSI FIGLIE
 
 //CLASSE CIBO
-class cibo extends prodotto
+class Cibo extends prodotto
 {
     private $peso;
 
     //Construct
     public function __construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo, $peso)
     {
-        $this->setImg($immagine);
-        $this->setTitle($titolo);
-        $this->setPrice($prezzo);
-        $this->setIcon($icona_Categoria);
-        $this->setType($tipo_Articolo);
+        //Keyword parent:: per riferirmi al construct della classe madre
+        parent::__construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo);
         $this->setWeight($peso);
     }
 
@@ -109,18 +106,14 @@ class cibo extends prodotto
 }
 
 //CLASSE GIOCHI
-class giochi extends prodotto
+class Giochi extends prodotto
 {
     private $tipo_gioco;
 
     //Construct
     public function __construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo, $tipo_gioco)
     {
-        $this->setImg($immagine);
-        $this->setTitle($titolo);
-        $this->setPrice($prezzo);
-        $this->setIcon($icona_Categoria);
-        $this->setType($tipo_Articolo);
+        parent::__construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo);
         $this->setTypeGioco($tipo_gioco);
     }
 
@@ -136,18 +129,14 @@ class giochi extends prodotto
 }
 
 //CLASSE CUCCE
-class cucce extends prodotto
+class Cucce extends prodotto
 {
     private $dimensione;
 
     //Construct
     public function __construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo, $dimensione)
     {
-        $this->setImg($immagine);
-        $this->setTitle($titolo);
-        $this->setPrice($prezzo);
-        $this->setIcon($icona_Categoria);
-        $this->setType($tipo_Articolo);
+        parent::__construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo);
         $this->setDimension($dimensione);
     }
 
@@ -161,4 +150,7 @@ class cucce extends prodotto
         $this->dimensione = $dimensione;
     }
 }
+
+$prodotto = new Cucce('path.cc', 'T appo', 11, 'c', 'cibo', '12cm');
+var_dump($prodotto);
 ?>
