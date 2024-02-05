@@ -10,10 +10,10 @@ require_once __DIR__ . '/Models/negozio.php';
 
 
 //Categoria cani/gatti
-$caniCategory = new Categoria('Cani');
+$caniCategory = new Categoria('🐶');
 var_dump($caniCategory);
 echo '<br>';
-$gattiCategory = new Categoria('Gatti');
+$gattiCategory = new Categoria('😺');
 var_dump($gattiCategory);
 echo '<br> <br>';
 
