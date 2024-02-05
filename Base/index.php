@@ -7,6 +7,9 @@
 Stampiamo delle card contenenti i dettagli dei **prodotti**, come `immagine`, `titolo`, `prezzo`, `icona della categoria` ed il `tipo di articolo` che si sta visualizzando (prodotto, cibo, gioco, cuccia, ecc). -->
 
 <?php
+//CLASSE PADRE
+
+//ClASSE PRODOTTO
 class prodotto
 {
     private $immagine;
@@ -15,6 +18,7 @@ class prodotto
     private $icona_Categoria;
     private $tipo_Articolo;
 
+    //Construct
     public function __construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo)
     {
         $this->setImg($immagine);
@@ -75,15 +79,86 @@ class prodotto
     }
 }
 
+//CLASSI FIGLIE
+
+//CLASSE CIBO
 class cibo extends prodotto
 {
+    private $peso;
+
+    //Construct
+    public function __construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo, $peso)
+    {
+        $this->setImg($immagine);
+        $this->setTitle($titolo);
+        $this->setPrice($prezzo);
+        $this->setIcon($icona_Categoria);
+        $this->setType($tipo_Articolo);
+        $this->setWeight($peso);
+    }
+
+    //Get & Set PESO cibo
+    public function getWeight()
+    {
+        return $this->peso;
+    }
+    public function setWeight($peso)
+    {
+        $this->peso = $peso;
+    }
 }
 
+//CLASSE GIOCHI
 class giochi extends prodotto
 {
+    private $tipo_gioco;
+
+    //Construct
+    public function __construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo, $tipo_gioco)
+    {
+        $this->setImg($immagine);
+        $this->setTitle($titolo);
+        $this->setPrice($prezzo);
+        $this->setIcon($icona_Categoria);
+        $this->setType($tipo_Articolo);
+        $this->setTypeGioco($tipo_gioco);
+    }
+
+    //Get & Set TIPO di gioco
+    public function getTypeGioco()
+    {
+        return $this->tipo_gioco;
+    }
+    public function setTypeGioco($tipo_gioco)
+    {
+        $this->tipo_gioco = $tipo_gioco;
+    }
 }
 
+//CLASSE CUCCE
 class cucce extends prodotto
 {
+    private $dimensione;
+
+    //Construct
+    public function __construct($immagine, $titolo, $prezzo, $icona_Categoria, $tipo_Articolo, $dimensione)
+    {
+        $this->setImg($immagine);
+        $this->setTitle($titolo);
+        $this->setPrice($prezzo);
+        $this->setIcon($icona_Categoria);
+        $this->setType($tipo_Articolo);
+        $this->setDimension($dimensione);
+    }
+
+    //Get & Set DIMENSIONE cuccia
+    public function getDimension()
+    {
+        return $this->dimensione;
+    }
+    public function setDimension($dimensione)
+    {
+        $this->dimensione = $dimensione;
+    }
 }
 ?>
