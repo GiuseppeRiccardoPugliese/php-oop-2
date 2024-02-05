@@ -151,6 +151,28 @@ class Cucce extends prodotto
     }
 }
 
-$prodotto = new Cucce('path.cc', 'T appo', 11, 'c', 'cibo', '12cm');
-var_dump($prodotto);
+
+
+//CLASSE CATEGORIA per i cani/gatti  NB.!! NON SI ESTENDE SU NESSUNA CLASSE
+class Categoria
+{
+
+    private $nome;
+
+    //Construct
+    public function __construct($nome)
+    {
+        $this->setCategory($nome);
+    }
+
+    //Get & Set CATEGORIA per i cani/gatti
+    public function getCategory()
+    {
+        return $this->nome;
+    }
+    public function setCategory($nome)
+    {
+        $this->nome = $nome;
+    }
+}
 ?>
