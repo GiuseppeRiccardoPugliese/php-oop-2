@@ -15,7 +15,7 @@ class Giochi extends Prodotto
     }
 
     //Get & Set TIPO di gioco
-    public function getTypeGioco()
+    public function get()
     {
         return $this->tipo_gioco;
     }
@@ -24,9 +24,9 @@ class Giochi extends Prodotto
         $this->tipo_gioco = $tipo_gioco;
     }
 
-    public function viewDetails()
-    {
-        parent::viewDetails();
-        echo "<p>Tipo di gioco: {$this->tipo_gioco}</p>";
-    }
+    // public function viewDetails()
+    // {
+    //     parent::viewDetails();
+    //     echo "<p>Tipo di gioco: {$this->tipo_gioco}</p>";
+    // }
 }

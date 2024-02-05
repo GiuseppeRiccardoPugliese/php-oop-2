@@ -69,14 +69,19 @@ class Prodotto
         $this->tipo_Articolo = $tipo_Articolo;
     }
 
-    public function viewDetails()
+    public function get()
     {
-        echo "<div class='card'>";
-        echo "<img src='{$this->immagine}' alt='{$this->titolo}'>";
-        echo "<h3>{$this->titolo}</h3>";
-        echo "<p>Prezzo: €{$this->prezzo}</p>";
-        echo "<p>Categoria: <img src='{$this->icona_Categoria}' alt='{$this->icona_Categoria}'></p>";
-        echo "<p>Tipo: {$this->tipo_Articolo}</p>";
-        echo "</div>";
+        return '//';
     }
+
+    // public function viewDetails()
+    // {
+    //     echo "<div class='card'>";
+    //     echo "<img src='{$this->immagine}' alt='{$this->titolo}'>";
+    //     echo "<h3>{$this->titolo}</h3>";
+    //     echo "<p>Prezzo: €{$this->prezzo}</p>";
+    //     echo "<p>Categoria: <img src='{$this->icona_Categoria}' alt='{$this->icona_Categoria}'></p>";
+    //     echo "<p>Tipo: {$this->tipo_Articolo}</p>";
+    //     echo "</div>";
+    // }
 }

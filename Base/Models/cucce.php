@@ -15,7 +15,7 @@ class Cucce extends Prodotto
     }
 
     //Get & Set DIMENSIONE cuccia
-    public function getDimension()
+    public function get()
     {
         return $this->dimensione;
     }
@@ -24,9 +24,9 @@ class Cucce extends Prodotto
         $this->dimensione = $dimensione;
     }
 
-    public function viewDetails()
-    {
-        parent::viewDetails();
-        echo "<p>Dimensione: {$this->dimensione} cm</p>";
-    }
+    // public function viewDetails()
+    // {
+    //     parent::viewDetails();
+    //     echo "<p>Dimensione: {$this->dimensione} cm</p>";
+    // }
 }

@@ -16,7 +16,7 @@ class Cibo extends Prodotto
     }
 
     //Get & Set PESO cibo
-    public function getWeight()
+    public function get()
     {
         return $this->peso;
     }
@@ -25,9 +25,9 @@ class Cibo extends Prodotto
         $this->peso = $peso;
     }
 
-    public function viewDetails()
-    {
-        parent::viewDetails();
-        echo "<p>Peso: {$this->peso} kg</p>";
-    }
+    // public function viewDetails()
+    // {
+    //     parent::viewDetails();
+    //     echo "<p>Peso: {$this->peso} kg</p>";
+    // }
 }
