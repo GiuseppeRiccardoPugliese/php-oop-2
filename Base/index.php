@@ -20,25 +20,26 @@ Stampiamo delle card contenenti i dettagli dei **prodotti**, come `immagine`, `t
 </head>
 
 <body>
+
     <?php
     foreach ($array_prodotti as $prod) {
     ?>
 
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin: 10px;">
             <img src="<?php echo $prod->getImg() ?>" class="card-img-top" alt="<?php echo $prod->getTitle() ?>">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $prod->getTitle() ?></h5>
                 <p class="card-text"> Prezzo: <?php echo $prod->getPrice() ?> euro </p>
-                <p class="card-text"> Categoria: <img src="<?php echo $prod->getIcon() ?>" alt="<?php echo $prod->getIcon() ?>"></p>
+                <p class="card-text"> Categoria: <img src="<?php echo $prod->getIcon()->getCategory() ?>" alt="<?php echo $prod->getIcon()->getCategory() ?>"></p>
                 <p class="card-text"> Tipo: <?php echo $prod->getType() ?></p>
                 <p class="card-text"><?php echo $prod->get() ?></p>
             </div>
+
         </div>
 
     <?php
     }
     ?>
-
 
 </body>
 

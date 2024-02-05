@@ -20,9 +20,9 @@ echo '<br> <br>';
 // $cardView = new CardView();
 
 $array_prodotti = [
-    $cibo = new Cibo('img/cibo.jpg', 'Croccantini premium', 19.99, 'img/cani-icon.png', 'Cibo', 'Peso: 2 kg'),
-    $giochi = new Giochi('img/giochi.jpg', 'Pallina rimbalzante', 9.99, 'img/cani-icon.png', 'Gioco', 'Pallina'),
-    $cuccia = new Cucce('img/cuccia.jpg', 'Cuccia deluxe', 49.99, 'img/cani-icon.png', 'Cuccia', 'Grande 50 cm'),
+    $cibo = new Cibo('img/cibo.jpg', 'Croccantini premium', 19.99, $caniCategory, 'Cibo', 'Peso: 2 kg'),
+    $giochi = new Giochi('img/giochi.jpg', 'Pallina rimbalzante', 9.99, $gattiCategory, 'Gioco', 'Pallina'),
+    $cuccia = new Cucce('img/cuccia.jpg', 'Cuccia deluxe', 49.99, $caniCategory, 'Cuccia', 'Grande 50 cm'),
 ];
 
 
