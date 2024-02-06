@@ -26,6 +26,7 @@ Stampiamo delle card contenenti i dettagli dei **prodotti**, come `immagine`, `t
     ?>
 
         <div class="card" style="width: 18rem; margin: 10px;">
+
             <img src="<?php echo $prod->getImg() ?>" class="card-img-top" alt="<?php echo $prod->getTitle() ?>">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $prod->getTitle() ?></h5>

@@ -18,12 +18,16 @@ var_dump($gattiCategory);
 echo '<br> <br>';
 
 // $cardView = new CardView();
+try {
+    $array_prodotti = [
+        $cibo = new Cibo('img/cibo.jpg', 'Croccantini premium', 19.99, $caniCategory, 'Cibo', 'Peso: 2 kg'),
+        $giochi = new Giochi('img/giochi.jpg', 'Pallina rimbalzante', 9.99, $gattiCategory, 'Gioco', 'Pallina'),
+        $cuccia = new Cucce('img/cuccia.jpg', 'Cuccia deluxe', 49.99, $caniCategory, 'Cuccia', 'Grande 50 cm'),
+    ];
+} catch (Exception $e) {
+    echo 'Errore per il prezzo.' . $e->getMessage();
+}
 
-$array_prodotti = [
-    $cibo = new Cibo('img/cibo.jpg', 'Croccantini premium', 19.99, $caniCategory, 'Cibo', 'Peso: 2 kg'),
-    $giochi = new Giochi('img/giochi.jpg', 'Pallina rimbalzante', 9.99, $gattiCategory, 'Gioco', 'Pallina'),
-    $cuccia = new Cucce('img/cuccia.jpg', 'Cuccia deluxe', 49.99, $caniCategory, 'Cuccia', 'Grande 50 cm'),
-];
 
 
 // $cardView->viewDetails($cibo);
